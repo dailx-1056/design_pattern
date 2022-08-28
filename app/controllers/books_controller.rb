@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all.decorate
+    @books = Book.available_books.decorate
   end
 
   def new
