@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :books do
     resources :book_borrows, only: :create
   end
+
+  resources :magazines
 end

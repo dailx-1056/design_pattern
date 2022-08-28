@@ -1,0 +1,16 @@
+<h1>Magazine list</h1>
+
+<%= link_to 'Create', new_magazine_path %>
+<% if @magazines.present? %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Available</th>
+      <th></th>
+    <tr>
+    <%= render @magazines %>
+  </table>
+<% else %>
+  <p>No magazine available</p>
+<% end %>

@@ -1,0 +1,12 @@
+<%= form_with model: @magazine do |f| %>
+  <%= f.label :title, 'Title' %>
+  <%= f.text_field :title, autofocus: true %>
+
+  <%= f.label :desc, 'Description' %>
+  <%= f.text_field :desc %>
+
+  <%= f.label :quantity, 'Quantity' %>
+  <%= f.number_field :quantity %>
+
+  <%= f.submit 'Submit', class: "btn btn-primary btn-right" %>
+<% end %>

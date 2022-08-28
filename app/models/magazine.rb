@@ -1,4 +1,4 @@
-class Book < ApplicationRecord
+class Magazine < ApplicationRecord
   CREATE_PARAMS = %i(title desc quantity)
 
   validates :borrowed, numericality: { less_than_or_equal_to: :quantity, allow_blank: true }
