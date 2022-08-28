@@ -3,7 +3,7 @@
   <td class="col-md-2"><%= book.desc %></td>
   <td class="col-md-2">
     <% if book.borrowed %>
-      <%= book.quantity - book.borrowed %>
+      <%= book.avaiable %>
     <% else %>
       <%= book.quantity %>
     <% end %>

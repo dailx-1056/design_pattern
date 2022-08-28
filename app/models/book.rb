@@ -3,4 +3,8 @@ class Book < ApplicationRecord
 
   validates :borrowed, numericality: { less_than_or_equal_to: :quantity }
   validates :borrowed, :quantity, numericality: { only_integer: true }
+
+  def avaiable
+    quantity - borrowed
+  end
 end
