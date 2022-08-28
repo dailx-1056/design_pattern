@@ -2,11 +2,7 @@
   <td class="col-md-2"><%= book.title %></td>
   <td class="col-md-2"><%= book.desc %></td>
   <td class="col-md-2">
-    <% if book.borrowed %>
-      <%= book.avaiable %>
-    <% else %>
-      <%= book.quantity %>
-    <% end %>
+    <%= available_book book %>
   </td>
   <td class="col-md-2">
     <%= link_to 'Borrow', book_book_borrows_path(book_id: book.id), method: :post %>
