@@ -1,0 +1,16 @@
+<h1>Book list</h1>
+
+<%= link_to 'Create', new_book_path %>
+<% if @books.present? %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Available</th>
+      <th></th>
+    <tr>
+    <%= render @books %>
+  </table>
+<% else %>
+  <p>No book available</p>
+<% end %>
